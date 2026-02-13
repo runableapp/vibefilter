@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>걸러드림 (VibeFilter) - 커뮤니티 게시글 추천 필터</title>
+  <link rel="icon" href="runable-favicon.ico" type="image/x-icon">
+  <meta name="description" content="VibeFilter는 한국 커뮤니티 게시글을 자동으로 수집하고, 사용자의 취향을 학습하여 관심 있는 글만 추천해주는 크롬 확장 프로그램입니다.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Yeon+Sung&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ════ Hero ════ -->
+  <header class="hero">
+    <img src="vibefilter_logo-s.webp" alt="VibeFilter 로고" class="hero-logo">
+    <div class="hero-korean-title">걸러드림</div>
+    <h1>
+      VibeFilter
+    </h1>
+    <p class="hero-tagline">
+      한국 커뮤니티 게시글을 자동으로 수집하고,<br>
+      내 취향을 학습하여 읽을 만한 글만 보여주는 크롬 확장 프로그램
+    </p>
+    <div class="badge-row">
+      <span class="badge accent">크롬 확장</span>
+      <span class="badge">서버 불필요</span>
+      <span class="badge">브라우저 내 AI 학습</span>
+      <span class="badge">한국어 자연어처리</span>
+    </div>
+  </header>
+
+  <!-- ════ Nav ════ -->
+  <nav>
+    <ul>
+      <li><a href="#why">왜 만들었나</a></li>
+      <li><a href="#what">무엇인가</a></li>
+      <li><a href="#how">사용법</a></li>
+      <li><a href="#architecture">구조</a></li>
+      <li><a href="#privacy">프라이버시</a></li>
+    </ul>
+  </nav>
+
+  <!-- ════ Why ════ -->
+  <section id="why">
+    <div class="container">
+      <div class="section-label">Why</div>
+      <h2 class="section-title">왜 만들었나</h2>
+      <p class="section-desc">
+        한국 커뮤니티에는 하루에도 수백 개의 게시글이 올라옵니다.
+        매번 접속해서 페이지를 넘기며 제목을 하나하나 훑어보는 건 시간 낭비입니다.
+        관심 없는 글이 대부분이고, 정작 읽고 싶은 글은 몇 개 안 되는데
+        그걸 찾으려고 매번 같은 과정을 반복하게 됩니다.
+      </p>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="icon">⏱️</div>
+          <h3>반복적인 시간 낭비</h3>
+          <p>매번 같은 사이트에 접속해서, 같은 페이지를 넘기며, 읽을 글을 찾는 반복 작업에 지쳤습니다.</p>
+        </div>
+        <div class="why-card">
+          <div class="icon">🎯</div>
+          <h3>내 관심사와 무관한 글</h3>
+          <p>수십 개 글 중 실제로 클릭하는 글은 몇 개뿐. 나머지는 스크롤만 하다 넘기게 됩니다.</p>
+        </div>
+        <div class="why-card">
+          <div class="icon">🧠</div>
+          <h3>패턴은 있지만 설명하기 어려움</h3>
+          <p>어떤 글을 좋아하는지 정확히 말하긴 어렵지만, 클릭 패턴에는 분명한 취향이 존재합니다.</p>
+        </div>
+        <div class="why-card">
+          <div class="icon">🔄</div>
+          <h3>이미 읽은 글을 또 봄</h3>
+          <p>어제 읽은 글이 오늘도 목록에 있고, 이미 본 글을 다시 스크롤하게 됩니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ What ════ -->
+  <section id="what">
+    <div class="container">
+      <div class="section-label">What</div>
+      <h2 class="section-title">무엇을 하는 프로그램인가</h2>
+      <p class="section-desc">
+        걸러드림(VibeFilter)은 <strong>크롬 확장 프로그램 하나</strong>로 모든 것을 처리합니다.
+        별도의 서버나 백엔드 없이 브라우저 안에서 게시글 수집, AI 학습, 추천까지 모두 동작합니다.
+        15개 한국 커뮤니티의 인기 게시글을 자동으로 모아 사이드 패널에 보여주고,
+        🫵🏻당신의 읽기 패턴을 학습하여 점점 더 정확하게 관심 있는 글만 추천해줍니다.
+      </p>
+
+      <ul class="feature-list">
+        <li>
+          <div class="feature-icon green">📋</div>
+          <div class="feature-text">
+            <h4>15개 커뮤니티 자동 수집</h4>
+            <p>클리앙, 펨코, 루리웹, 웃대, 인벤, 82쿡, SLR클럽, 뽐뿌, 이토랜드 등 15개 커뮤니티의 인기 게시글을 주기적으로 자동 수집합니다.</p>
+          </div>
+        </li>
+        <li>
+          <div class="feature-icon purple">🤖</div>
+          <div class="feature-text">
+            <h4>브라우저 내 AI 학습 및 추천</h4>
+            <p>한국어 토크나이저, TF-IDF, 로지스틱 회귀 분류기가 브라우저 안에서 직접 학습합니다. 선택적으로 ONNX 임베딩 모델도 활성화할 수 있습니다. 관심도에 따라 <span style="color: #4ade80;">초록</span>(관심 높음)~<span style="color: #f87171;">빨강</span>(관심 낮음) 색상으로 표시합니다.</p>
+          </div>
+        </li>
+        <li>
+          <div class="feature-icon green">📖</div>
+          <div class="feature-text">
+            <h4>읽은 글 추적</h4>
+            <p>이미 읽은 글을 기억하고 숨길 수 있습니다. 더 이상 같은 글을 반복해서 보지 않아도 됩니다.</p>
+          </div>
+        </li>
+        <li>
+          <div class="feature-icon red">👎</div>
+          <div class="feature-text">
+            <h4>관심없음 표시 및 작성자 차단</h4>
+            <p>관심없음 버튼으로 싫어하는 글을 명시적으로 표시하고, 작성자 차단으로 특정 작성자의 모든 글을 숨길 수 있습니다.</p>
+          </div>
+        </li>
+        <li>
+          <div class="feature-icon purple">🔍</div>
+          <div class="feature-text">
+            <h4>토픽 및 키워드 필터</h4>
+            <p>특정 토픽(스포츠, 연예, 정치 등)이나 직접 입력한 키워드가 포함된 게시글을 자동으로 숨길 수 있습니다.</p>
+          </div>
+        </li>
+        <li>
+          <div class="feature-icon green">📊</div>
+          <div class="feature-text">
+            <h4>선호도 리포트</h4>
+            <p>좋아하는/싫어하는 단어, 토픽 선호도, 선호 커뮤니티, 사이트별 활동 통계 등 상세한 분석 리포트를 제공합니다.</p>
+          </div>
+        </li>
+        <li>
+          <div class="feature-icon purple">💾</div>
+          <div class="feature-text">
+            <h4>백업 및 복원</h4>
+            <p>학습 데이터, 읽기 기록, 설정을 JSON 파일로 내보내고 복원할 수 있습니다. 브라우저를 변경하거나 재설치해도 데이터를 유지할 수 있습니다.</p>
+          </div>
+        </li>
+      </ul>
+
+      <!-- Screenshots -->
+      <div class="screenshots">
+        <h3 style="font-size: 1.1rem; margin-bottom: 16px; color: var(--text-dim);">스크린샷</h3>
+        <div class="screenshot-grid">
+          <div class="screenshot-item"><img src="vibefilter-1.webp" alt="VibeFilter 사이드 패널"></div>
+          <div class="screenshot-item"><img src="vibefilter-extension-options.webp" alt="VibeFilter 확장 옵션"></div>
+          <div class="screenshot-item"><img src="vibefilter-extension-settings.webp" alt="VibeFilter 확장 설정"></div>
+          <div class="screenshot-item"><img src="vibefilter-report.webp" alt="VibeFilter 선호도 리포트"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ How ════ -->
+  <section id="how">
+    <div class="container">
+      <div class="section-label">How to Use</div>
+      <h2 class="section-title">사용법</h2>
+      <p class="section-desc">
+        Chrome 웹 스토어에서 설치하면 바로 사용할 수 있습니다.
+        별도의 서버나 복잡한 설정이 필요 없습니다.
+      </p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>Chrome 웹 스토어에서 설치</h4>
+            <p>아래 버튼을 클릭하여 Chrome 웹 스토어에서 걸러드림을 설치합니다.</p>
+            <p style="margin-top: 12px;">
+              <a href="#" id="chrome-store-link" style="display: inline-block; background: var(--accent); color: #fff; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: opacity 0.2s;">Chrome 웹 스토어에서 설치</a>
+            </p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>사이드 패널 열기</h4>
+            <p>크롬 도구 모음에서 걸러드림 아이콘을 클릭하면 메뉴가 나타납니다. "사이드 패널"을 선택하면 게시글 목록이 표시됩니다.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>자연스럽게 사용하기</h4>
+            <p>관심 있는 글을 클릭하면 현재 탭에서 원문으로 이동합니다. 30개 이상의 글을 읽으면 AI가 자동으로 학습을 시작합니다.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>색상으로 추천 확인</h4>
+            <p>학습이 시작되면 게시글 제목에 색상이 표시됩니다. <span style="color: var(--green);">초록색</span>은 관심 있을 가능성이 높은 글, <span style="color: var(--red);">붉은색</span>은 낮은 글입니다.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>피드백으로 정확도 향상</h4>
+            <p>관심 없는 글에 관심없음 버튼을 누르거나, 특정 작성자를 차단하면 학습이 더 빨라집니다. 설정에서 토픽/키워드 필터도 설정할 수 있습니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ Architecture ════ -->
+  <section id="architecture">
+    <div class="container">
+      <div class="section-label">Architecture</div>
+      <h2 class="section-title">시스템 구조</h2>
+      <p class="section-desc">
+        VibeFilter는 크롬 확장 프로그램 하나로 모든 것을 처리합니다.
+        별도의 서버가 필요 없으며, 모든 데이터는 브라우저 내부 IndexedDB에 저장됩니다.
+      </p>
+
+      <div class="arch-diagram">
+        <div class="arch-box">
+          Service Worker<br>
+          <small style="color: var(--text-muted);">주기적 스크래핑 트리거</small>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-box highlight">
+          Offscreen Document<br>
+          <small style="color: var(--text-muted);">15개 사이트 HTML 수집 · 파싱</small>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-box">
+          IndexedDB<br>
+          <small style="color: var(--text-muted);">게시글 · 학습 데이터 저장</small>
+        </div>
+      </div>
+
+      <div class="arch-diagram" style="margin-top: 12px;">
+        <div class="arch-box">
+          사이드 패널 UI<br>
+          <small style="color: var(--text-muted);">게시글 목록 · 리포트 · 필터</small>
+        </div>
+        <div class="arch-arrow">↔</div>
+        <div class="arch-box highlight">
+          ML Web Worker<br>
+          <small style="color: var(--text-muted);">TF-IDF · 로지스틱 회귀 · ONNX 임베딩</small>
+        </div>
+        <div class="arch-arrow">↔</div>
+        <div class="arch-box">
+          IndexedDB<br>
+          <small style="color: var(--text-muted);">모델 · 읽기 기록 · 설정</small>
+        </div>
+      </div>
+
+      
+    </div>
+  </section>
+
+  <!-- ════ Privacy ════ -->
+  <section id="privacy">
+    <div class="container">
+      <div class="section-label">Privacy</div>
+      <h2 class="section-title">프라이버시</h2>
+      <p class="section-desc">
+        VibeFilter는 사용자의 프라이버시를 최우선으로 설계되었습니다.
+        서버가 없기 때문에, 모든 데이터 처리와 학습이 사용자의 브라우저 안에서만 이루어지며
+        어떤 정보도 외부로 전송되지 않습니다.
+      </p>
+
+      <ul class="privacy-list">
+        <li><span class="icon">💻</span><div><strong>100% 브라우저 내 처리</strong><br><span class="privacy-desc">AI 학습, 게시글 수집, 추천 모델 모두 크롬 브라우저 안에서 직접 실행됩니다. 외부 서버를 사용하지 않습니다.</span></div></li>
+        <li><span class="icon">🔒</span><div><strong>데이터 전송 없음</strong><br><span class="privacy-desc">읽기 기록, 선호도, 학습 데이터 등 어떤 개인 데이터도 외부 서버로 전송되지 않습니다. 네트워크 통신은 커뮤니티 사이트의 공개 게시판 목록 페이지 접근만 수행합니다.</span></div></li>
+        <li><span class="icon">🗄️</span><div><strong>브라우저 내부 저장</strong><br><span class="privacy-desc">모든 데이터는 브라우저의 IndexedDB와 chrome.storage에 저장됩니다. 설정 페이지에서 언제든 삭제할 수 있으며, 확장 프로그램 제거 시 자동으로 삭제됩니다.</span></div></li>
+        <li><span class="icon">🚫</span><div><strong>제3자 공유 없음</strong><br><span class="privacy-desc">분석, 광고, 추적 등을 위한 외부 서비스를 일절 사용하지 않습니다.</span></div></li>
+      </ul>
+      <p style="margin-top: 28px; text-align: center;">
+        <a href="privacy.html" style="color: var(--accent-light); font-size: 0.92rem; text-decoration: none; border: 1px solid var(--border-light); padding: 10px 24px; border-radius: 8px; display: inline-block; transition: all 0.2s;">📄 Privacy Policy (개인정보 처리방침)</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ════ Footer ════ -->
+  <footer>
+    <p>
+      <strong>걸러드림 (VibeFilter)</strong> &mdash; 커뮤니티 게시글 AI 추천 필터 &nbsp;·&nbsp; v3.0.0
+    </p>
+    <div style="margin-top: 32px;">
+      <img src="runable-thankyou-midsize.webp" alt="Thank you" style="max-width: 360px; width: 100%; height: auto; border-radius: 12px;">
+    </div>
+    <p style="margin-top: 24px; font-size: 0.78rem; color: var(--text-muted);">
+      &copy; 2026 <a href="https://runable.app">Runable.app</a>. All rights reserved.
+    </p>
+  </footer>
+
+  <!-- ── Screenshot lightbox ── -->
+  <div class="screenshot-overlay" id="screenshotOverlay">
+    <img src="" alt="스크린샷 확대" id="screenshotOverlayImg">
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+/* ── Privacy page overrides & specifics ── */
+
+body {
+  line-height: 1.8;
+}
+
+.container {
+  max-width: 760px;
+  padding: 60px 24px 80px;
+}
+
+header {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 32px;
+  margin-bottom: 48px;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+header .subtitle {
+  font-size: 0.95rem;
+  color: var(--text-dim);
+}
+
+header .back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 0.88rem;
+  color: var(--accent-light);
+  text-decoration: none;
+}
+
+header .back-link:hover {
+  text-decoration: underline;
+}
+
+.effective-date {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+.lang-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 56px 0;
+}
+
+.lang-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent-light);
+  margin-bottom: 32px;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 36px;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 24px;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+p {
+  color: var(--text-dim);
+  margin-bottom: 14px;
+  font-size: 0.93rem;
+}
+
+ul {
+  margin: 10px 0 16px 20px;
+  color: var(--text-dim);
+  font-size: 0.93rem;
+}
+
+ul li {
+  margin-bottom: 6px;
+}
+
+strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+a {
+  color: var(--accent-light);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  padding: 40px 24px;
+  font-size: 0.82rem;
+}
+
+@media (max-width: 640px) {
+  .container { padding: 40px 18px 60px; }
+  header h1 { font-size: 1.4rem; }
+}
