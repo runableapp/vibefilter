@@ -134,6 +134,24 @@ body {
   line-height: 1.8;
 }
 
+.free-tag {
+  display: inline-block;
+  background: linear-gradient(135deg, #00b894, #00cec9);
+  color: #fff;
+  font-weight: 800;
+  padding: 1px 10px;
+  border-radius: 6px;
+  font-size: 1.05em;
+  letter-spacing: 0.5px;
+  animation: free-bounce 2s ease-in-out infinite;
+  box-shadow: 0 0 12px rgba(0, 184, 148, 0.4);
+}
+
+@keyframes free-bounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-2px) scale(1.05); }
+}
+
 .badge-row {
   display: flex;
   justify-content: center;
