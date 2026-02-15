@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>걸러드림 (VibeFilter) - 문제 신고</title>
+  <link rel="icon" href="i/runable-favicon.ico" type="image/x-icon">
+  <meta name="description" content="VibeFilter 크롬 확장 프로그램의 버그, 오류, 개선 요청을 신고할 수 있습니다.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Yeon+Sung&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a href="index.html" class="back-link-top">&larr; 메인 페이지로 돌아가기</a>
+
+  <!-- ════ Hero ════ -->
+  <header class="hero">
+    <a href="index.html"><img src="i/vibefilter_logo-s.webp" alt="VibeFilter 로고" class="hero-logo"></a>
+    <div class="hero-korean-title">걸러드림</div>
+    <h1>문제 신고</h1>
+    <p class="hero-tagline">
+      버그, 오류, 개선 요청이 있다면<br>
+      아래 양식을 통해 알려주세요
+    </p>
+    <div class="badge-row">
+      <span class="badge accent">버그 리포트</span>
+      <span class="badge">개선 요청</span>
+      <span class="badge">피드백</span>
+    </div>
+  </header>
+
+  <!-- ════ Nav ════ -->
+  <nav>
+    <ul>
+      <li><a href="#tips">신고 전 팁</a></li>
+      <li><a href="#form">신고 양식</a></li>
+    </ul>
+  </nav>
+
+  <!-- ════ Tips ════ -->
+  <section id="tips">
+    <div class="container">
+      <div class="section-label">Before Reporting</div>
+      <h2 class="section-title">신고 전 확인사항</h2>
+      <p class="section-desc">
+        문제를 신고하기 전에 아래 내용을 확인하면 더 빠른 해결이 가능합니다.
+      </p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>에러 로그 확인 및 복사</h4>
+            <p>설정(⚙) → 맨 아래 <strong style="color: var(--accent-light);">"로그"</strong> 버튼 → <strong>"📋 복사"</strong> 버튼을 클릭하여 에러 로그를 복사합니다. 신고 양식에 붙여넣으면 원인 파악이 훨씬 빨라집니다.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>증상 정리</h4>
+            <p>어떤 상황에서 문제가 발생하는지, 어떤 동작을 했을 때 발생하는지, 항상 발생하는지 가끔 발생하는지 등을 정리해두세요.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>버전 확인</h4>
+            <p>사이드 패널 상단 또는 설정 → "걸러드림에 대하여..."에서 현재 버전을 확인합니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 24px; padding: 16px 20px; background: rgba(108, 92, 231, 0.08); border: 1px solid rgba(108, 92, 231, 0.2); border-radius: 12px; font-size: 0.9rem; color: var(--text-dim); line-height: 1.8;">
+        <strong style="color: var(--accent-light);">💡 팁:</strong> 로그 복사 방법을 모르겠다면 <a href="how-to-use.html#logs" style="color: var(--accent-light);">사용 가이드 → 에러 로그</a> 섹션을 참고하세요.
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ Form ════ -->
+  <section id="form">
+    <div class="container">
+      <div class="section-label">Report Form</div>
+      <h2 class="section-title">신고 양식</h2>
+      <p class="section-desc">
+        아래 양식을 작성하여 문제를 신고해주세요. 가능한 한 자세히 작성해주시면 빠른 해결에 도움이 됩니다.
+      </p>
+
+      <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 24px; overflow: hidden;">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSfht0onu16A7itnWtE0Gkh1ECOLGG3Wg3Tpx_VI2UXmIpXjyA/viewform?embedded=true"
+          width="100%"
+          height="1027"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          style="border: none; border-radius: 12px; background: transparent;"
+        >양식을 불러오는 중...</iframe>
+      </div>
+
+      <div style="margin-top: 32px; padding: 18px 22px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; font-size: 0.9rem; color: var(--text-dim); line-height: 1.8;">
+        <strong style="color: var(--text);">🧑‍💻 개발자이거나 GitHub 계정이 있다면?</strong><br>
+        GitHub Issues를 통해서도 버그 리포트나 기능 요청을 제출할 수 있습니다.<br>
+        <a href="https://github.com/runableapp/vibefilter/issues" target="_blank" rel="noopener" style="color: var(--accent-light); text-decoration: none; font-weight: 500;">→ GitHub Issues에서 신고하기</a>
+      </div>
+
+      <p style="margin-top: 40px; text-align: center;">
+        <a href="index.html" style="color: var(--accent-light); font-size: 0.92rem; text-decoration: none; border: 1px solid var(--border-light); padding: 10px 24px; border-radius: 8px; display: inline-block; transition: all 0.2s;">← 메인 페이지로 돌아가기</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ════ Footer ════ -->
+  <footer>
+    <p>
+      <strong>걸러드림 (VibeFilter)</strong> &mdash; 커뮤니티 게시글 AI 추천 필터 &nbsp;·&nbsp; v3.0.1
+    </p>
+    <div style="margin-top: 32px;">
+      <img src="i/runable-thankyou-midsize.webp" alt="Thank you" style="max-width: 360px; width: 100%; height: auto; border-radius: 12px;">
+    </div>
+    <p style="margin-top: 24px; font-size: 0.78rem; color: var(--text-muted);">
+      &copy; 2026 <a href="https://runable.app">Runable.app</a>. All rights reserved.
+    </p>
+  </footer>
+
+  <!-- ── Screenshot lightbox ── -->
+  <div class="screenshot-overlay" id="screenshotOverlay">
+    <img src="" alt="스크린샷 확대" id="screenshotOverlayImg">
+  </div>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>걸러드림 (VibeFilter) - 사용 가이드</title>
+  <link rel="icon" href="i/runable-favicon.ico" type="image/x-icon">
+  <meta name="description" content="VibeFilter 크롬 확장 프로그램의 사용법을 스크린샷과 함께 자세히 안내합니다.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Yeon+Sung&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a href="index.html" class="back-link-top">&larr; 메인 페이지로 돌아가기</a>
+
+  <!-- ════ Hero ════ -->
+  <header class="hero">
+    <a href="index.html"><img src="i/vibefilter_logo-s.webp" alt="VibeFilter 로고" class="hero-logo"></a>
+    <div class="hero-korean-title">걸러드림</div>
+    <h1>사용 가이드</h1>
+    <p class="hero-tagline">
+      걸러드림의 모든 기능을 스크린샷과 함께<br>
+      단계별로 안내합니다
+    </p>
+    <div class="badge-row">
+      <span class="badge accent">사용법</span>
+      <span class="badge">설정</span>
+      <span class="badge">백업/복원</span>
+      <span class="badge">로그</span>
+    </div>
+  </header>
+
+  <!-- ════ Nav ════ -->
+  <nav>
+    <ul>
+      <li><a href="#sidepanel">사이드 패널</a></li>
+      <li><a href="#reading">글 읽기</a></li>
+      <li><a href="#settings">설정</a></li>
+      <li><a href="#backup">백업/복원</a></li>
+      <li><a href="#logs">로그</a></li>
+      <li><a href="#issues">문제 신고</a></li>
+    </ul>
+  </nav>
+
+  <!-- ════ Side Panel ════ -->
+  <section id="sidepanel">
+    <div class="container">
+      <div class="section-label">Side Panel</div>
+      <h2 class="section-title">사이드 패널</h2>
+      <p class="section-desc">
+        걸러드림의 핵심 화면입니다. 15개 한국 커뮤니티의 인기 게시글을 한눈에 모아보고,
+        AI가 추천하는 글을 색상으로 확인할 수 있습니다.
+      </p>
+
+      <!-- Screenshot -->
+      <div class="screenshots" style="margin-bottom: 32px;">
+        <div class="screenshot-grid" style="grid-template-columns: 1fr;">
+          <div class="screenshot-item"><img src="i/vf-ext.webp" alt="확장 프로그램"></div>
+        </div>
+      </div>
+
+      <h3 style="font-size: 1.1rem; margin-bottom: 20px; color: var(--text);">사이드 패널 열기</h3>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>툴바에서 아이콘 클릭</h4>
+            <p>Chrome 툴바에서 걸러드림 아이콘을 클릭하면 팝업 메뉴가 나타납니다.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>"사이드 패널" 선택</h4>
+            <p>팝업에서 <strong style="color: var(--accent-light);">📋 사이드 패널</strong> 버튼을 클릭하면 브라우저 오른쪽에 게시글 목록이 표시됩니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="font-size: 1.1rem; margin: 32px 0 16px; color: var(--text);">패널 구성 요소</h3>
+      <div class="screenshots" style="margin-bottom: 32px;">
+        <div class="screenshot-grid" style="grid-template-columns: 1fr;">
+          <div class="screenshot-item"><img src="i/vf-sidepanel.webp" alt="사이드 패널 화면"></div>
+        </div>
+      </div>
+      <ul class="feature-list">
+        <li>
+          <div class="feature-icon green">📊</div>
+          <div class="feature-text">
+            <h4>상단 헤더</h4>
+            <p>버전 정보, 새로고침 버튼(↻), 새로고침 카운트다운 타이머가 표시됩니다.</p>
+          </div>
+        </li>
+        <li>
+          <div class="feature-icon purple">🔽</div>
+          <div class="feature-text">
+            <h4>필터 토글</h4>
+            <p><strong>읽은 글 숨기기</strong> — 이미 읽은 글을 목록에서 숨깁니다.<br>
+               <strong>관심없는 글 숨기기</strong> — 관심없음 처리한 글을 숨깁니다.</p>
+          </div>
+        </li>
+        <li>
+          <div class="feature-icon green">📋</div>
+          <div class="feature-text">
+            <h4>게시글 목록</h4>
+            <p>각 게시글에는 순위, 제목, 출처 사이트, 댓글 수, 조회수, 시간이 표시됩니다. AI 추천이 활성화되면 배경색으로 관심도가 표시됩니다.</p>
+          </div>
+        </li>
+        <li>
+          <div class="feature-icon purple">🤖</div>
+          <div class="feature-text">
+            <h4>추천 상태 표시</h4>
+            <p>하단에 AI 추천 상태가 표시됩니다. 30개 이상의 글을 읽으면 "추천 활성"으로 바뀝니다.</p>
+          </div>
+        </li>
+      </ul>
+
+      <h3 style="font-size: 1.1rem; margin: 32px 0 16px; color: var(--text);">추천 배경색의 의미</h3>
+      <div class="why-grid">
+        <div class="why-card" style="border-left: 3px solid var(--green);">
+          <div class="icon">🟢</div>
+          <h3 style="color: var(--green);">초록 배경</h3>
+          <p>AI가 관심 있을 것으로 예측한 게시글입니다. 점수가 높을수록 진한 초록색 배경으로 표시됩니다.</p>
+        </div>
+        <div class="why-card" style="border-left: 3px solid var(--red);">
+          <div class="icon">🔴</div>
+          <h3 style="color: var(--red);">빨간 배경</h3>
+          <p>관심도가 낮을 것으로 예측한 게시글입니다. "관심없는 글 숨기기"로 자동 필터링할 수 있습니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ Reading ════ -->
+  <section id="reading">
+    <div class="container">
+      <div class="section-label">Reading Articles</div>
+      <h2 class="section-title">글 읽기 및 피드백</h2>
+      <p class="section-desc">
+        사이드 패널에서 게시글을 읽고, AI 학습에 도움이 되는 피드백을 제공하는 방법입니다.
+      </p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>글 제목 클릭 → 원문 열기</h4>
+            <p>사이드 패널에서 글 제목을 클릭하면 현재 탭에서 원문 페이지가 열립니다. 클릭한 글은 <strong>읽은 글</strong>로 기록되어 AI가 "좋아하는 글"로 학습합니다.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>관심없음 (👎) 표시</h4>
+            <p>글 옆의 <strong style="color: var(--red);">👎</strong> 버튼을 누르면 "관심 없음"으로 처리됩니다. AI가 이를 참고하여 비슷한 글의 추천 점수를 낮춥니다.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>작성자 차단 (❌)</h4>
+            <p>작성자 이름 옆의 <strong style="color: var(--red);">❌</strong> 버튼을 클릭하면 해당 작성자의 모든 글이 목록에서 숨겨지고, 싫어하는 작성자로 학습됩니다.</p>
+          </div>
+        </div>
+        
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>선호도 리포트</h4>
+            <p>상단의 <strong style="color: var(--accent-light);">리포트</strong> 버튼을 클릭하면 좋아하는/싫어하는 단어, 토픽 선호도, 선호 커뮤니티 등 상세한 분석 리포트를 확인할 수 있습니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Existing screenshot -->
+      <div class="screenshots" style="margin-top: 24px;">
+        <h3 style="font-size: 1.1rem; margin-bottom: 16px; color: var(--text-dim);">선호도 리포트 예시</h3>
+        <div class="screenshot-grid" style="grid-template-columns: 1fr;">
+          <div class="screenshot-item"><img src="i/vf-report.webp" alt="선호도 리포트"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ Settings ════ -->
+  <section id="settings">
+    <div class="container">
+      <div class="section-label">Settings</div>
+      <h2 class="section-title">설정</h2>
+      <p class="section-desc">
+        설정 페이지에서 걸러드림의 모든 기능을 세부적으로 조절할 수 있습니다.
+        팝업의 ⚙️ 버튼 또는 사이드 패널 상단의 ⚙ 아이콘을 클릭하여 설정 페이지를 엽니다.
+      </p>
+
+      <!-- Existing screenshots -->
+      <div class="screenshots" style="margin-bottom: 32px;">
+        <div class="screenshot-grid">
+          <div class="screenshot-item"><img src="i/vf-setting1.webp" alt="설정 페이지 상단"></div>
+          <div class="screenshot-item"><img src="i/vf-setting2.webp" alt="설정 페이지 하단"></div>
+        </div>
+      </div>
+
+      <!-- Display -->
+      <h3 style="font-size: 1.1rem; margin: 24px 0 16px; color: var(--text);">설정 항목</h3>
+      <ul class="feature-list">
+        <li>
+          <div class="feature-icon purple">🔤</div>
+          <div class="feature-text">
+            <h4>글꼴 크기</h4>
+            <p>사이드 패널의 글꼴 크기를 11px~18px 범위에서 조절할 수 있습니다. 기본값은 13px입니다.</p>
+          </div>
+        </li>
+        <li>
+          <div class="feature-icon green">⏱</div>
+          <div class="feature-text">
+            <h4>자동 새로고침 주기</h4>
+            <p>백그라운드에서 커뮤니티 글을 자동으로 수집하는 간격을 1~120분으로 설정합니다. 기본값은 10분입니다.</p>
+          </div>
+        </li>
+        <li>
+          <div class="feature-icon purple">🌐</div>
+          <div class="feature-text">
+            <h4>커뮤니티 사이트</h4>
+            <p>15개 커뮤니티 중 보고 싶은 사이트만 활성화합니다. 비활성화된 사이트의 게시글은 목록에서 제외됩니다. "전체 선택" / "전체 해제"로 한 번에 조절 가능합니다.</p>
+          </div>
+        </li>
+      </ul>
+
+      <!-- Sites screenshot -->
+      <div class="screenshots" style="margin: 24px 0;">
+        <div class="screenshot-grid" style="grid-template-columns: 1fr;">
+          <div class="screenshot-item"><img src="i/howto-sites.png" alt="커뮤니티 사이트 설정"></div>
+        </div>
+      </div>
+
+      <ul class="feature-list">
+        <li>
+          <div class="feature-icon green">🏷</div>
+          <div class="feature-text">
+            <h4>토픽 필터</h4>
+            <p>숨기고 싶은 토픽(스포츠, 연예, 정치 등)을 체크하면 해당 주제의 게시글이 자동으로 숨겨집니다.</p>
+          </div>
+        </li>
+        <li>
+          <div class="feature-icon purple">🔑</div>
+          <div class="feature-text">
+            <h4>키워드 필터</h4>
+            <p>특정 키워드를 직접 입력하여 제목에 해당 키워드가 포함된 게시글을 숨길 수 있습니다. 키워드 입력 후 Enter 또는 "추가" 버튼을 클릭합니다.</p>
+          </div>
+        </li>
+        <li>
+          <div class="feature-icon green">🤖</div>
+          <div class="feature-text">
+            <h4>AI 임베딩</h4>
+            <p>ONNX 임베딩 모델을 활성화하면 추천 정확도가 크게 향상됩니다. 최초 실행 시 약 120MB 모델을 다운로드하며, 이후에는 브라우저에 캐시됩니다. 진행률 바가 표시됩니다.</p>
+          </div>
+        </li>
+        <li>
+          <div class="feature-icon red">🚫</div>
+          <div class="feature-text">
+            <h4>차단된 작성자</h4>
+            <p>사이드 패널에서 차단한 작성자 목록을 관리합니다. 차단 해제 버튼으로 개별 해제할 수 있습니다.</p>
+          </div>
+        </li>
+        <li>
+          <div class="feature-icon red">🗑</div>
+          <div class="feature-text">
+            <h4>데이터 관리</h4>
+            <p>세 가지 삭제 옵션이 있습니다:<br>
+              <strong>포스팅 캐시 삭제</strong> — 수집된 게시글만 삭제 (읽기 기록, 설정 유지)<br>
+              <strong>학습 데이터 초기화</strong> — AI 모델, 읽기/거부 기록 초기화 (게시글 유지)<br>
+              <strong>전체 삭제</strong> — 모든 데이터 삭제 (되돌릴 수 없음)</p>
+          </div>
+        </li>
+      </ul>
+
+      <p style="margin-top: 24px; padding: 16px 20px; background: rgba(108, 92, 231, 0.08); border: 1px solid rgba(108, 92, 231, 0.2); border-radius: 12px; font-size: 0.9rem; color: var(--text-dim); line-height: 1.8;">
+        <strong style="color: var(--accent-light);">중요:</strong> 설정을 변경한 후에는 반드시 맨 아래 <strong style="color: var(--accent-light);">"설정 저장"</strong> 버튼을 클릭해야 적용됩니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- ════ Backup / Restore ════ -->
+  <section id="backup">
+    <div class="container">
+      <div class="section-label">Backup &amp; Restore</div>
+      <h2 class="section-title">백업 / 복원</h2>
+      <p class="section-desc">
+        학습 데이터, 읽기 기록, 차단 작성자, 설정을 JSON 파일로 내보내거나 복원할 수 있습니다.
+        브라우저를 변경하거나 확장 프로그램을 재설치할 때 유용합니다.
+      </p>
+
+      <!-- Screenshot -->
+      <div class="screenshots" style="margin-bottom: 32px;">
+        <div class="screenshot-grid" style="grid-template-columns: 1fr;">
+          <div class="screenshot-item"><img src="i/howto-backup.png" alt="백업 / 복원 화면"></div>
+        </div>
+      </div>
+
+      <h3 style="font-size: 1.1rem; margin-bottom: 20px; color: var(--text);">데이터 내보내기 (백업)</h3>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>설정 페이지 열기</h4>
+            <p>팝업의 ⚙️ 버튼 또는 사이드 패널의 ⚙ 아이콘을 클릭합니다.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>"백업 / 복원" 섹션으로 이동</h4>
+            <p>설정 페이지 하단의 <strong style="color: var(--accent-light);">백업 / 복원</strong> 섹션을 찾습니다.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>"데이터 내보내기" 클릭</h4>
+            <p>버튼을 클릭하면 <code style="background: var(--bg-card); padding: 2px 8px; border-radius: 4px; font-size: 0.88rem;">vibefilter-backup-YYYY-MM-DD.json</code> 파일이 자동으로 다운로드됩니다.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>파일 보관</h4>
+            <p>다운로드된 JSON 파일을 안전한 위치에 보관합니다. 이 파일에 학습 데이터, 읽기 기록, 차단 작성자, 모든 설정이 포함되어 있습니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="font-size: 1.1rem; margin: 40px 0 20px; color: var(--text);">데이터 가져오기 (복원)</h3>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>설정 페이지 → "백업 / 복원" 섹션</h4>
+            <p>위와 동일하게 설정 페이지의 백업/복원 섹션으로 이동합니다.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>"데이터 가져오기" 클릭</h4>
+            <p>버튼을 클릭하면 파일 선택 창이 나타납니다.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>백업 JSON 파일 선택</h4>
+            <p>이전에 내보낸 <code style="background: var(--bg-card); padding: 2px 8px; border-radius: 4px; font-size: 0.88rem;">.json</code> 파일을 선택합니다. 기존 학습 데이터가 덮어씌워집니다.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>복원 완료</h4>
+            <p>성공 메시지가 표시되면 복원이 완료됩니다. 사이드 패널을 새로고침하면 복원된 데이터가 반영됩니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 24px; padding: 16px 20px; background: rgba(225, 112, 85, 0.08); border: 1px solid rgba(225, 112, 85, 0.2); border-radius: 12px; font-size: 0.9rem; color: var(--text-dim); line-height: 1.8;">
+        <strong style="color: var(--red);">주의:</strong> 데이터 가져오기는 기존 학습 데이터를 덮어씁니다. 현재 데이터를 유지하고 싶다면 먼저 내보내기를 해두세요.
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ Logs ════ -->
+  <section id="logs">
+    <div class="container">
+      <div class="section-label">Error Logs</div>
+      <h2 class="section-title">에러 로그</h2>
+      <p class="section-desc">
+        확장 프로그램의 에러 로그를 확인하고 관리할 수 있습니다.
+        문제가 발생했을 때 로그를 확인하면 원인을 파악하는 데 도움이 됩니다.
+      </p>
+
+      <!-- Screenshot -->
+      <div class="screenshots" style="margin-bottom: 32px;">
+        <div class="screenshot-grid" style="grid-template-columns: 1fr;">
+          <div class="screenshot-item"><img src="i/howto-logs.png" alt="에러 로그 화면"></div>
+        </div>
+      </div>
+
+      <h3 style="font-size: 1.1rem; margin-bottom: 20px; color: var(--text);">로그 확인 방법</h3>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>설정 페이지 열기</h4>
+            <p>팝업의 ⚙️ 버튼 또는 사이드 패널의 ⚙ 아이콘을 클릭합니다.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>"로그" 버튼 클릭</h4>
+            <p>설정 페이지 맨 아래의 <strong style="color: var(--accent-light);">로그</strong> 버튼을 클릭하면 에러 로그 페이지가 열립니다.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <div class="step-content">
+            <h4>로그 확인</h4>
+            <p>각 로그 항목에는 타임스탬프와 메시지가 표시됩니다. 에러 메시지는 빨간색으로 강조됩니다. 최신 항목이 위에 표시됩니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="font-size: 1.1rem; margin: 32px 0 16px; color: var(--text);">로그 관리 기능</h3>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="icon">📋</div>
+          <h3>복사</h3>
+          <p>"📋 복사" 버튼을 클릭하면 모든 로그가 클립보드에 복사됩니다. 문제 신고 시 붙여넣기에 유용합니다.</p>
+        </div>
+        <div class="why-card">
+          <div class="icon">💾</div>
+          <h3>내보내기</h3>
+          <p>"💾 내보내기" 버튼을 클릭하면 로그를 파일로 저장합니다. 상세한 문제 리포트에 첨부할 수 있습니다.</p>
+        </div>
+        <div class="why-card">
+          <div class="icon">🗑</div>
+          <h3>삭제</h3>
+          <p>"🗑 삭제" 버튼을 클릭하면 모든 로그를 삭제합니다. 정리 후 새로운 에러만 추적하고 싶을 때 사용합니다.</p>
+        </div>
+        <div class="why-card">
+          <div class="icon">← </div>
+          <h3>돌아가기</h3>
+          <p>"← 설정" 링크를 클릭하면 설정 페이지로 돌아갑니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ Report Issues ════ -->
+  <section id="issues">
+    <div class="container">
+      <div class="section-label">Report Issues</div>
+      <h2 class="section-title">문제 신고</h2>
+      <p class="section-desc">
+        버그, 오류, 개선 요청이 있다면 아래 방법으로 알려주세요.
+      </p>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="icon">📝</div>
+          <h3>에러 로그 복사</h3>
+          <p>먼저 설정 → 로그에서 에러 로그를 "📋 복사"하세요. 문제 신고 시 함께 제출하면 빠른 해결에 도움이 됩니다.</p>
+        </div>
+        <div class="why-card">
+          <div class="icon">📮</div>
+          <h3>문제 신고 양식</h3>
+          <p>아래 링크에서 문제 신고 양식을 작성하여 제출할 수 있습니다. 증상, 재현 방법, 로그를 함께 제출해주세요.</p>
+        </div>
+      </div>
+
+      <p style="margin-top: 32px; text-align: center;">
+        <a href="report-issues.html" style="display: inline-block; background: var(--accent); color: #fff; padding: 14px 36px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 1.05rem; transition: opacity 0.2s, transform 0.2s;">📮 문제 신고하기</a>
+      </p>
+
+      <p style="margin-top: 40px; text-align: center;">
+        <a href="index.html" style="color: var(--accent-light); font-size: 0.92rem; text-decoration: none; border: 1px solid var(--border-light); padding: 10px 24px; border-radius: 8px; display: inline-block; transition: all 0.2s;">← 메인 페이지로 돌아가기</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ════ Footer ════ -->
+  <footer>
+    <p>
+      <strong>걸러드림 (VibeFilter)</strong> &mdash; 커뮤니티 게시글 AI 추천 필터 &nbsp;·&nbsp; v3.0.1
+    </p>
+    <div style="margin-top: 32px;">
+      <img src="i/runable-thankyou-midsize.webp" alt="Thank you" style="max-width: 360px; width: 100%; height: auto; border-radius: 12px;">
+    </div>
+    <p style="margin-top: 24px; font-size: 0.78rem; color: var(--text-muted);">
+      &copy; 2026 <a href="https://runable.app">Runable.app</a>. All rights reserved.
+    </p>
+  </footer>
+
+  <!-- ── Screenshot lightbox ── -->
+  <div class="screenshot-overlay" id="screenshotOverlay">
+    <img src="" alt="스크린샷 확대" id="screenshotOverlayImg">
+  </div>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>

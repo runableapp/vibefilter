@@ -4,18 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>걸러드림 (VibeFilter) - 커뮤니티 게시글 추천 필터</title>
-  <link rel="icon" href="runable-favicon.ico" type="image/x-icon">
+  <link rel="icon" href="i/runable-favicon.ico" type="image/x-icon">
   <meta name="description" content="VibeFilter는 한국 커뮤니티 게시글을 자동으로 수집하고, 사용자의 취향을 학습하여 관심 있는 글만 추천해주는 크롬 확장 프로그램입니다.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Yeon+Sung&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <!-- ════ Hero ════ -->
   <header class="hero">
-    <img src="vibefilter_logo-s.webp" alt="VibeFilter 로고" class="hero-logo">
+    <img src="i/vibefilter_logo-s.webp" alt="VibeFilter 로고" class="hero-logo">
     <div class="hero-korean-title">걸러드림</div>
     <h1>
       VibeFilter
@@ -148,10 +148,8 @@
       <div class="screenshots">
         <h3 style="font-size: 1.1rem; margin-bottom: 16px; color: var(--text-dim);">스크린샷</h3>
         <div class="screenshot-grid">
-          <div class="screenshot-item"><img src="vibefilter-1.webp" alt="VibeFilter 사이드 패널"></div>
-          <div class="screenshot-item"><img src="vibefilter-extension-options.webp" alt="VibeFilter 확장 옵션"></div>
-          <div class="screenshot-item"><img src="vibefilter-extension-settings.webp" alt="VibeFilter 확장 설정"></div>
-          <div class="screenshot-item"><img src="vibefilter-report.webp" alt="VibeFilter 선호도 리포트"></div>
+          <div class="screenshot-item"><img src="i/vf-main.webp" alt="VibeFilter 사이드 패널"></div>
+         
         </div>
       </div>
     </div>
@@ -163,18 +161,19 @@
       <div class="section-label">How to Use</div>
       <h2 class="section-title">사용법</h2>
       <p class="section-desc">
-        Chrome 웹 스토어에서 설치하면 바로 사용할 수 있습니다.
+        수동 설치 후 바로 사용할 수 있습니다.
         별도의 서버나 복잡한 설정이 필요 없습니다.
+        <span style="font-size: 0.85rem; color: var(--text-muted);">(Chrome 웹 스토어 심사 중 — 승인 후 스토어에서도 설치 가능)</span>
       </p>
 
       <div class="steps">
         <div class="step">
           <div class="step-num"></div>
           <div class="step-content">
-            <h4>Chrome 웹 스토어에서 설치</h4>
-            <p>아래 버튼을 클릭하여 Chrome 웹 스토어에서 걸러드림을 설치합니다.</p>
+            <h4>확장 프로그램 설치</h4>
+            <p>현재 Chrome 웹 스토어 심사 중입니다. 그동안 수동 설치로 바로 사용할 수 있습니다.</p>
             <p style="margin-top: 12px;">
-              <a href="#" id="chrome-store-link" style="display: inline-block; background: var(--accent); color: #fff; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: opacity 0.2s;">Chrome 웹 스토어에서 설치</a>
+              <a href="manual-install.html" style="display: inline-block; background: var(--accent); color: #fff; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: opacity 0.2s;">📦 수동 설치 안내</a>
             </p>
           </div>
         </div>
@@ -207,6 +206,12 @@
           </div>
         </div>
       </div>
+
+      <p style="margin-top: 32px; text-align: center;">
+        <a href="how-to-use.html" style="color: var(--accent-light); font-size: 0.92rem; text-decoration: none; border: 1px solid var(--border-light); padding: 10px 24px; border-radius: 8px; display: inline-block; transition: all 0.2s;">📖 자세한 사용 가이드 보기</a>
+        &nbsp;&nbsp;
+        <a href="manual-install.html" style="color: var(--accent-light); font-size: 0.92rem; text-decoration: none; border: 1px solid var(--border-light); padding: 10px 24px; border-radius: 8px; display: inline-block; transition: all 0.2s;">📦 수동 설치 안내</a>
+      </p>
     </div>
   </section>
 
@@ -277,6 +282,8 @@
       </ul>
       <p style="margin-top: 28px; text-align: center;">
         <a href="privacy.html" style="color: var(--accent-light); font-size: 0.92rem; text-decoration: none; border: 1px solid var(--border-light); padding: 10px 24px; border-radius: 8px; display: inline-block; transition: all 0.2s;">📄 Privacy Policy (개인정보 처리방침)</a>
+        &nbsp;&nbsp;
+        <a href="report-issues.html" style="color: var(--accent-light); font-size: 0.92rem; text-decoration: none; border: 1px solid var(--border-light); padding: 10px 24px; border-radius: 8px; display: inline-block; transition: all 0.2s;">📮 문제 신고</a>
       </p>
     </div>
   </section>
@@ -284,10 +291,10 @@
   <!-- ════ Footer ════ -->
   <footer>
     <p>
-      <strong>걸러드림 (VibeFilter)</strong> &mdash; 커뮤니티 게시글 AI 추천 필터 &nbsp;·&nbsp; v3.0.0
+      <strong>걸러드림 (VibeFilter)</strong> &mdash; 커뮤니티 게시글 AI 추천 필터 &nbsp;·&nbsp; v3.0.1
     </p>
     <div style="margin-top: 32px;">
-      <img src="runable-thankyou-midsize.webp" alt="Thank you" style="max-width: 360px; width: 100%; height: auto; border-radius: 12px;">
+      <img src="i/runable-thankyou-midsize.webp" alt="Thank you" style="max-width: 360px; width: 100%; height: auto; border-radius: 12px;">
     </div>
     <p style="margin-top: 24px; font-size: 0.78rem; color: var(--text-muted);">
       &copy; 2026 <a href="https://runable.app">Runable.app</a>. All rights reserved.
@@ -299,7 +306,7 @@
     <img src="" alt="스크린샷 확대" id="screenshotOverlayImg">
   </div>
 
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 
 </body>
 </html>
