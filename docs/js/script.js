@@ -1,3 +1,10 @@
+window.dataLayer = window.dataLayer || [];
+function gtag() {
+  dataLayer.push(arguments);
+}
+gtag('js', new Date());
+gtag('config', 'G-R05N6KT4TM');
+
 // Scroll-aware nav highlight
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('nav a');
@@ -41,3 +48,4 @@ document.addEventListener('keydown', (e) => {
     overlayImg.src = '';
   }
 });
+
